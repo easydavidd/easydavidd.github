@@ -1,0 +1,1188 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+                                                    /* La page entière*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat Alternates", sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+                                                    /* Conteneur du header */
+.contenueurDuHeader{
+    width: 100%;
+    height: 100vh;
+}
+
+                                                    /* Le header avec l'image de fond de chaussure */
+.contenueurDuHeader header{
+    position: absolute;
+    background-image: url(img/IMG-20240502-WA0045.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    filter: opacity(1) brightness(.4);
+}
+
+                                                    /* La navbar avec le titre easyshoes et les onglets de navigations */
+.nav{
+    width: 100%;
+    position: absolute;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+                                                    /* Le titre de la navbar */
+.nav h1{
+    font-size: 30px;
+    filter: drop-shadow(1px 1px 20px rgb(255, 255, 255));
+}
+
+                                                    /* Les liens dans la navbar */
+.liens ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+}
+.liens ul li:hover{
+    transform: scale(1.2);
+}
+
+.liens ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+.liens ul li a:hover{
+    color: rgb(255, 123, 0);
+    border-bottom: 1px solid rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton de menu */
+.bgmenu{
+    display: none;
+    position: absolute;
+    right: 30px;
+}
+
+                                                    /* Le responsive de la navbar à -850 pixels */
+@media screen and (max-width: 850px) {
+    .bgmenu{
+        display: block;
+        z-index: 2;
+        filter: brightness(2);
+    }
+
+    .liens{
+        top: 0;
+        position: absolute;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        left: 0;
+        transition: .3s;
+        margin-left: -100%;
+        backdrop-filter: blur(2px);
+        background-color: #ffffff79;
+    }
+
+    .liens.mobile{
+        margin-left: 0;
+    }
+
+    .liens ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .liens ul li a{
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+
+                                                    /* Le responsive de la navbar à - 280 pixels */
+@media screen and (max-width: 280px) {
+    .nav{
+        padding: 30px 0px;
+    }
+    .nav h1{
+        font-size: 10px;
+    }
+}
+
+
+
+
+                                                    /* Le conteneur juste après la navbar mais sur le header */
+.pageDeGarde{
+    position: absolute;
+    top: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 100px;
+    text-align: center;
+    width: 100%;
+    gap: 70px;
+}
+
+                                                    /* Le slogan principal de notre site web */
+.pageDeGarde h1{
+    font-size: 40px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    filter: drop-shadow(1px 1px 20px rgb(255, 255, 255));
+}
+
+                                                    /* Le sous-slogan de notre site web */
+.pageDeGarde p{
+    font-size: 15px;
+    color: rgb(232, 223, 223);
+    margin-top: 45px;
+    margin-bottom: 45px;
+    font-family: cursive;
+    filter: drop-shadow(1px 1px 20px rgb(255, 123, 0));
+}
+
+                                                    /* Conteneur de l'input et du bouton */
+
+.recherche{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+                                                    /* L'input de type recherche (search) */
+.recherche input{
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
+    border: none;
+    border-radius: 5px;
+    color: grey;
+    height: 30px;
+    padding-left: 10px;
+    width: 25em;
+    outline: none;
+}
+
+.recherche input:focus-visible{
+    border-bottom: 3px solid rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton (To research) à côté de l'input */
+.recherche button{
+    width: 100px;
+    height: 30px;
+    color: black;
+    font-weight: bold;
+    background-color: rgb(255, 123, 0);
+    border-radius: 5px 0;
+    border: 0;
+    text-align: center;
+}
+
+.recherche button:hover{
+    transform: scale(1.02);
+    color: rgb(255, 123, 0);
+    background-color: black;
+    font-style: italic;
+}
+
+                                                    /* Le conteneur de l'image de chaussure juste à côté du slogan principal et du sous-slogan */
+.imageDeShoes{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    width: 320px;
+    height: 330px;
+    border: none;
+    box-shadow: 0px 10px 5px 1px rgba(0, 0, 0, 0.342);
+}
+
+                                                    /* L'image de chaussure dans le conteneur d'image juste à côté de slogan principal et du sous-slogan */
+.imageDeShoes img{
+    width: 310px;
+    height: 310px;
+}
+
+                                                    /* responsive du conteneur qui est juste après la navbar mais sur le header */
+                                                    /* responsive de largueur de -1199 pixels */
+@media screen and (max-width: 1199px) {
+    .pageDeGarde{
+        padding: 0px 30px;
+        gap: 10px;
+    }
+}
+
+                                                    /* responsive de largueur de -995 pixels */
+@media screen and (max-width: 995px) {
+    .pageDeGarde{
+        display: flex;
+        flex-direction: column;
+        top: 20vh;
+    }
+
+    .imageDeShoes{
+        width: 520px;
+        height: 530px;
+    }
+    .imageDeShoes img{
+        width: 510px;
+        height: 510px;
+    }
+
+    .pageDeGarde p{
+        margin-top: 70px;
+        font-size: 20px;
+    }
+    .recherche{
+        margin-top: 70px;
+        margin-bottom: 30px;
+    }
+    .recherche input{
+        width: 35em;
+    }
+    .recherche button{
+        width: 100px;
+        font-size: 10px;
+    }
+}
+
+                                                    /* responsive de largueur de -680 pixels */
+@media screen and (max-width: 680px) {
+    .imageDeShoes{
+        width: 420px;
+        height: 430px;
+    }
+    .imageDeShoes img{
+        width: 410px;
+        height: 410px;
+    }
+
+    .recherche input{
+        width: 25em;
+    }
+    .recherche button{
+        width: 80px;
+        font-size: 10px;
+    }
+}
+
+                                                    /* responsive de largueur de -500 pixels */
+@media screen and (max-width: 500px) {
+    .nav{
+        padding: 30px 20px;
+    }
+
+    .nav h1{
+        font-size: 30px;
+        filter: drop-shadow(1px 1px 20px rgb(255, 255, 255));
+    }
+
+    .pageDeGarde p{
+        margin-top: 70px;
+        font-size: 20px;
+    }
+    .recherche{
+        margin-top: 70px;
+        margin-bottom: 50px;
+    }
+
+    .recherche input{
+        width: 20em;
+        height: 25px;
+    }
+    .recherche button{
+        width: 80px;
+        height: 25px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .imageDeShoes{
+        width: 350px;
+        height: 350px;
+    }
+    .imageDeShoes img{
+        width: 350px;
+        height: 350px;
+    }
+
+    .pageDeGarde p{
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    .recherche{
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    .recherche input{
+        width: 17em;
+        height: 25px;
+    }
+    .recherche button{
+        width: 80px;
+        height: 25px;
+        font-size: 10px;
+    }
+}
+
+                                                    /* responsive de largueur de -350 pixels */
+@media screen and (max-width: 350px) {
+    .imageDeShoes{
+        width: 300px;
+        height: 300px;
+    }
+    .imageDeShoes img{
+        width: 300px;
+        height: 300px;
+    }
+    .recherche input{
+        width: 15em;
+    }
+    .recherche button{
+        width: 70px;
+        font-size: 10px;
+    }
+}
+
+                                                    /* responsive de largueur de -320 pixels */
+@media screen and (max-width: 320px) {
+    .imageDeShoes{
+        width: 230px;
+        height: 230px;
+    }
+    .imageDeShoes img{
+        width: 290px;
+        height: 290px;
+    }
+}
+
+                                                    /* responsive de hauteur de -820 pixels */
+@media screen and (max-height: 820px) {
+    .contenueurDuHeader{
+        height: 100vh;
+    }
+
+    .contenueurDuHeader header{
+        height: 100vh;
+    }
+
+    .pageDeGarde p{
+        margin-top: 3px;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+    .recherche{
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .imageDeShoes{
+        width: 220px;
+        height: 260px;
+    }
+
+    .imageDeShoes img{
+        width: 240px;
+        height: 240px;
+    }
+}
+
+                                                    /* responsive de hauteur de -750 pixels */
+@media screen and (max-height: 750px) {
+    .imageDeShoes{
+        width: 280px;
+        height: 290px;
+    }
+
+    .imageDeShoes img{
+        width: 270px;
+        height: 270px;
+    }
+}
+
+                                                    /* responsive de hauteur de -700 pixels */
+@media screen and (max-height: 700px) {
+    .imageDeShoes{
+        width: 250px;
+        height: 260px;
+    }
+
+    .imageDeShoes img{
+        width: 240px;
+        height: 240px;
+    }
+}
+
+                                                    /* responsive de hauteur de -670 pixels */
+@media screen and (max-height: 670px) {
+    .contenueurDuHeader{
+        height: 100vh;
+    }
+
+    .contenueurDuHeader header{
+        height: 100vh;
+    }
+}
+
+                                                    /* responsive de hauteur de -650 pixels */
+@media screen and (max-height: 650px) {
+    .contenueurDuHeader{
+        height: 110vh;
+    }
+
+    .contenueurDuHeader header{
+        height: 110vh;
+    }
+}
+
+                                                    /* responsive de hauteur de -565 pixels */
+@media screen and (max-height: 565px) {
+    .contenueurDuHeader{
+        height: 120vh;
+    }
+
+    .contenueurDuHeader header{
+        height: 120vh;
+    }
+}
+
+                                                    /* responsive de hauteur de -430 pixels */
+@media screen and (max-height: 430px) {
+    .contenueurDuHeader{
+        height: 130vh;
+    }
+
+    .contenueurDuHeader header{
+        height: 130vh;
+    }
+}
+
+                                                    /* responsive de hauteur de -380 pixels */
+@media screen and (max-height: 380px) {
+    .imageDeShoes{
+        width: 250px;
+        height: 200px;
+    }
+
+    .imageDeShoes img{
+        width: 240px;
+        height: 200px;
+    }
+}
+
+
+
+
+                                                    /* L'espace de marque de chaussure juste après la page de garde */
+.espaceDeMarque{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(243, 215, 189);
+    padding: 0 3px;
+}
+
+                                                    /* Les marques de chaussures */
+.espaceDeMarque ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+.espaceDeMarque ul li:hover{
+    transform: scale(1.2);
+}
+
+.espaceDeMarque ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+    font-weight: bold;
+}
+.espaceDeMarque ul li a:hover{
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(1px 1px 20px rgb(0, 0, 0));
+    font-style: italic;
+}
+
+                                                    /* responsive de l'espace de marque de chaussure à -475 pixels juste après la page de garde */
+@media screen and (max-width: 475px) {
+    .espaceDeMarque ul li a{
+        font-size: 7px;
+    }
+}
+
+                                                    /* responsive de l'espace de marque de chaussure à -315 pixels juste après la page de garde */
+@media screen and (max-width: 315px) {
+    .espaceDeMarque ul li a{
+        font-size: 5px;
+    }
+}
+
+
+
+
+
+                                                    /* La section de la partie shoes juste après l'espace de marque de chaussure */
+.shoes{
+    width: 100%;
+    background-color: rgb(191, 190, 188);
+    height: max-content;
+}
+
+                                                    /* Le titre de la section */
+.titreDeDiv h1{
+    text-align: center;
+    padding-top: 30px;
+    color: white;
+    text-decoration: underline overline rgb(243, 215, 189);
+    filter: drop-shadow(1px 1px 20px rgb(0, 0, 0));
+    font-weight: bold;
+    font-size: 40px;
+}
+
+                                                    /* Le conteneur de la grande categorie */
+.englobeCategorie{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+                                                    /* Les catégories de personnes */
+.categories{
+    width: 80%;
+    height: 450px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Tous les h2 se trouvant dans les a dans les différentes catégories */
+.categories a{
+    text-decoration: none;
+}
+
+                                                    /* La carte de la catégorie homme */
+.carteHomme{
+    width: 350px;
+    height: 300px;
+    background-image: url(img/16b622b3-6fa0-417e-92ce-4ca4f5fb5e69.jpeg);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.342);
+    filter: brightness(.7);
+    flex: 1;
+    background-position: center;
+    background-size: cover;
+    transition: flex 0.8s ease;
+    filter: blur(1.2px) brightness(.7);
+}
+.carteHomme:hover{
+    flex: 5;
+    height: 300px;
+    filter: brightness(1) blur(0);
+}
+                                                    /* Le h2 */
+.carteHomme .homme {
+    padding-top: 120px;
+}
+                                                    /* Le lien */
+.carteHomme .homme a{
+    color: white;
+    width: 520px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    filter: drop-shadow(1px 1px 20px rgb(255, 123, 0));
+}
+
+                                                    /* La carte de la catégorie enfant */
+.carteEnfant{
+    width: 300px;
+    height: 275px;
+    background-image: url(img/enfantShoes.jpeg);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.342);
+    filter: brightness(.7);
+    flex: 1;
+    background-position: center;
+    background-size: cover;
+    transition: flex 0.8s ease;
+    filter: blur(1.2px) brightness(.7);
+}
+.carteEnfant:hover{
+    flex: 5;
+    height: 300px;
+    filter: brightness(1) blur(0);
+}
+                                                    /* Le h2 */
+.carteEnfant .enfant {
+    padding-top: 120px;
+}
+                                                    /* Le lien */
+.carteEnfant .enfant a{
+    color: rgb(255, 123, 0);
+    width: 520px;
+    border-top: 2px solid rgb(255, 123, 0);
+    border-bottom: 2px solid rgb(255, 123, 0);
+    filter: drop-shadow(1px 1px 20px rgb(255, 77, 0));
+}
+
+                                                    /* La carte de la catégorie femme */
+.carteFemme{
+    width: 350px;
+    height: 300px;
+    background-image: url(img/chaussureDeFemme.jpeg);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.342);
+    filter: brightness(.7);
+    flex: 1;
+    background-position: center;
+    background-size: cover;
+    transition: flex 0.8s ease;
+    filter: blur(1.2px) brightness(.7);
+}
+.carteFemme:hover{
+    flex: 5;
+    height: 300px;
+    filter: brightness(1) blur(0);
+}
+                                                    /* Le h2 */
+.carteFemme .femme{
+    padding-top: 120px;
+}
+                                                    /* Le lien */
+.carteFemme .femme a{
+    color: black;
+    width: 520px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    filter: drop-shadow(1px 1px 20px rgb(255, 123, 0));
+}
+
+                                                    /* responsive des cartes de la section shoes à -770 pixels */
+@media screen and (max-width: 700px) {
+    .categories{
+        gap: 15px;
+    }
+}
+
+                                                    /* responsive des cartes de la section shoes à -550 pixels */
+@media screen and (max-width: 550px) {
+    .titreDeDiv h1{
+        font-size: 25px;
+    }
+
+    .categories{
+        width: 90%;
+        height: 650px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .carteHomme{
+        width: 300px;
+    }
+    .carteHomme:hover{
+        transform: scale(1.05);
+    }
+
+    .carteEnfant{
+        width: 250px;
+    }
+    .carteEnfant:hover{
+        transform: scale(1.05);
+    }
+
+    .carteFemme{
+        width: 300px;
+    }
+    .carteFemme:hover{
+        transform: scale(1.05);
+    }
+}
+
+                                                    /* responsive des cartes de la section shoes à -320 pixels */
+@media screen and (max-width: 320px) {
+    .categories{
+        width: 90%;
+        flex-direction: column;
+    }
+    .carteHomme{
+        width: 250px;
+    }
+    .carteEnfant{
+        width: 200px;
+    }
+    .carteFemme{
+        width: 250px;
+    }
+}
+
+                                                    /* responsive des cartes de la section shoes à -320 pixels */
+@media screen and (max-width: 315px) {
+        .categories{
+            width: 90%;
+            flex-direction: column;
+        }
+        .carteHomme{
+            width: 200px;
+        }
+        .carteEnfant{
+            width: 150px;
+        }
+        .carteFemme{
+            width: 200px;
+        }
+}
+
+
+
+
+                                                    /* La div de la partie about us juste après l'espace de marque de chaussure */
+.aboutUs{
+    width: 100%;
+    height: max-content;
+    background-color: rgb(255, 255, 255);
+}
+
+                                                    /* Le titre de la div aboutUs */
+.aboutUsTitre h1{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: white;
+    text-decoration: underline overline rgb(243, 215, 189);
+    filter: drop-shadow(1px 1px 20px rgb(0, 0, 0));
+    font-weight: bold;
+    font-size: 40px;
+}
+
+                                                    /* Le conteneur du conteneur de la div de la carte de localisation et de la div des infos */
+.contain{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+                                                    /* Le conteneur de la div de la carte de localisation et de la div des infos */
+.container{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+                                                    /* Conteneur de l'image du magasin de vente de chaussure */
+.container .lieu{
+    width: 50%;
+    height: 500px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    filter: drop-shadow(1px 1px 20px rgb(0, 0, 0));
+}
+
+                                                    /* L'image du magasin de chaussure */
+.container .lieu img{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+                                                    /* Conteneur des informations sur le lieu du magasin */
+.container .infos{
+    width: 50%;
+    height: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 28px;
+}
+
+                                                    /* Les informations du magasin */
+.container .infos h1{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+                                                    /* Le nom du propriétaire du magasin */
+.container .infos .nomProprio{
+    font-weight: bold;
+    filter: drop-shadow(1px 1px 20px rgb(0, 0, 0));
+}
+
+                                                    /* Conteneur des réseaux sociaux du magasin */
+.container .infos .reseaux{
+    width: 100%;
+}
+
+                                                    /* Les réseaux du magasin */
+.container .infos .reseaux ul{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.container .infos .reseaux ul li{
+    list-style: none;
+}
+
+.container .infos .reseaux ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.container .infos .reseaux ul li a img{
+    width: 30px;
+    height: 30px;
+}
+
+.container .infos .reseaux ul li a img:hover{
+    border: none;
+    transform: scale(1.5);
+    border: 1px solid black;
+    filter: drop-shadow(1px 1px 20px rgb(0, 0, 0));
+}
+
+
+                                                    /* Responsive de la partie about us à -900 pixels juste après la section shoes */
+@media screen and (max-width: 900px) {
+    .aboutUsTitre h1{
+        font-size: 25px;
+    }
+
+    .contain .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container .lieu{
+        width: 98%;
+    }
+
+    .container .infos{
+        width: 98%;
+    }
+
+    .container .infos h1{
+        font-size: 15px
+    }
+
+    .container .infos .nomProprio{
+        font-size: 15px;
+    }
+}
+
+                                                    /* Responsive de la partie about us à -334  pixels juste après la section shoes */
+@media screen and (max-width: 334px) {
+    .container .infos h1{
+        font-size: 12px
+    }
+
+    .container .infos .nomProprio{
+        font-size: 10px;
+    }
+}
+
+
+
+
+
+
+
+                                                    /* La div de la partie contact juste après l'espace de marque de chaussure */
+.contact{
+    width: 100%;
+    height: max-content;
+    background-color: rgb(191, 190, 188);
+}
+
+                                                    /* Le titre de la div contact */
+.contactTitre h1{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: white;
+    text-decoration: underline overline rgb(243, 215, 189);
+    filter: drop-shadow(1px 1px 20px rgb(0, 0, 0));
+    font-weight: bold;
+    font-size: 40px;
+}
+
+                                                    /* Le conteneur du conteneur de la div de la carte de localisation et de la div des infos */
+.containContact{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+                                                    /* Le conteneur de la div de la carte de localisation et de la div des infos */
+.containerContact{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+                                                    /* La div de l'image de confiance dans contact */
+.containerContact .imageContact{
+    width: 50%;
+    height: 373px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    filter: drop-shadow(1px 1px 20px rgb(0, 0, 0));
+}
+
+                                                    /* L'image de confiance dans contact */
+.containerContact .imageContact img{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 0 0 25px;
+}
+
+                                                    /* La div du formulaire */
+.containerContact .formulaire{
+    width: 50%;
+    height: 373px;
+}
+
+                                                    /* Le fieldset du formulaire */
+.containerContact .formulaire form fieldset{
+    height: 373px;
+    border-radius: 0 25px 25px 0;
+    padding: 20px;
+    background-color: white;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    filter: drop-shadow(1px 1px 20px rgb(0, 0, 0));
+}
+
+                                                    /* Tous les 'input'à l'intérieur du fieldset */
+.containerContact .formulaire form fieldset input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 20em;
+    height: 30px;
+    padding-left: 5px;
+    font-style: italic;
+    font-family: cursive;
+}
+
+                                                    /* La div du bouton s'inscrire à l'intérieur du fieldset */
+.containerContact .formulaire form fieldset .bouton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+                                                    /* Le bouton s'inscrire */
+.containerContact .formulaire form fieldset .bouton button{
+    width: 155px;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: white;
+    color: green;
+    font-family: cursive;
+}
+
+                                                    /* Lorsqu'on survole le bouton */
+.containerContact .formulaire form fieldset .bouton button:hover{
+    color: white;
+    background-color: green;
+    transform: scale(1.02);
+    font-style: italic;
+    filter: drop-shadow(1px 1px 20px rgb(37, 37, 37));
+}
+
+.containerContact .presentation{
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.containerContact .presentation h3{
+    padding-bottom: 10px;
+}
+
+                                                    /* Responsive de la partie registration à -1275 pixels juste après la partie about us */
+@media screen and (max-width: 1275px) {
+    .containerContact{
+        width: 60%;
+    }
+}
+
+                                                    /* Responsive de la partie registration à -1045 pixels juste après la partie about us */
+@media screen and (max-width: 1045px) {
+    .containerContact{
+        width: 70%;
+    }
+}
+
+                                                    /* Responsive de la partie registration à -900 pixels juste après la partie about us */
+@media screen and (max-width: 900px) {
+    .contactTitre h1{
+        font-size: 25px;
+    }
+}
+
+                                                    /* Responsive de la partie registration à -875 pixels juste après la partie about us */
+@media screen and (max-width: 875px) {
+    .containerContact{
+        width: 80%;
+    }
+
+    .containerContact .presentation h3{
+        font-size: 15px;
+    }
+}
+
+                                                    /* Responsive de la partie registration à -735 pixels juste après la partie about us */
+@media screen and (max-width: 735px) {
+    .containerContact{
+        width: 90%;
+    }
+}
+
+                                                    /* Responsive de la partie registration à -650 pixels juste après la partie about us */
+@media screen and (max-width: 650px) {
+    .containerContact{
+        width: 95%;
+    }
+}
+
+                                                    /* Responsive de la partie registration à -625 pixels juste après la partie about us */
+@media screen and (max-width: 625px) {
+    .containerContact .imageContact{
+        height: 340px;
+    }
+
+    .containerContact .imageContact img{
+        height: 100%;
+    }
+
+    .containerContact .formulaire{
+        height: 340px;
+    }
+
+    .containerContact .formulaire form fieldset{
+        height: 340px;
+    }
+
+    .containerContact .formulaire form fieldset input{
+        width: 15em;
+    }
+}
+
+                                                    /* Responsive de la partie registration à -500 pixels juste après la partie about us */
+@media screen and (max-width: 500px) {
+    .containContact{
+        padding-top: 100px;
+        padding-bottom: 130px;
+    }
+
+    .containerContact .imageContact{
+        width: 30%;
+        height: 340px;
+    }
+
+    .containerContact .imageContact img{
+        height: 100%;
+    }
+
+    .containerContact .formulaire{
+        width: 70%;
+        height: 340px;
+    }
+
+    .containerContact .formulaire form fieldset{
+        height: 340px;
+    }
+
+    .containerContact .formulaire form fieldset input{
+        width: 15em;
+    }
+
+    .containerContact .presentation{
+        padding-top: 100px;
+        padding-bottom: 130px;
+    }
+}
+
+                                                    /* Responsive de la partie registration à -395 pixels juste après la partie about us */
+@media screen and (max-width: 395px) {
+    .containerContact{
+        width: 85%;
+    }
+
+    .containerContact .imageContact{
+        width: 30%;
+        height: 325px;
+    }
+
+    .containerContact .imageContact img{
+        height: 100%;
+    }
+
+    .containerContact .formulaire{
+        width: 70%;
+        height: 325px;
+    }
+
+    .containerContact .formulaire form fieldset{
+        height: 325px;
+    }
+
+    .containerContact .formulaire form fieldset input{
+        width: 12em;
+    }
+
+    .containerContact .presentation p{
+        font-size: 10px;
+    }
+}

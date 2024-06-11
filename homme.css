@@ -1,0 +1,2397 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: cursive;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url(img/1a35a11422bc3ff994ca772f8632481d.jpg);
+}
+
+                                                    /* Conteneur du header */
+.containheader{
+    width: 100%;
+    height: 100vh;
+}
+
+                                                    /* Le header avec l'image de fond de chaussure */
+.containheader header{
+    position: absolute;
+    background-image: url(img/16b622b3-6fa0-417e-92ce-4ca4f5fb5e69.jpeg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    filter: opacity(1) brightness(.4);
+}
+
+                                                    /* La navbar avec le bouton de recherche, le titre Man et le panier */
+.nav{
+    width: 100%;
+    position: absolute;
+    padding: 30px 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+                                                    /* La div qui englobe la loupe, la barre de recherche et le bouton rechercher */
+.nav .englobeRecherche{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Ce qui se passe lorsqu'on survole la loupe */
+.nav .englobeRecherche .loupe img:hover{
+    transform: scale(1.2);
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+                                                    /* Conteneur de l'input et du bouton */
+.nav .englobeRecherche .barreRecherche{
+    display: none;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+                                                    /* L'input de type recherche (search)  */
+.englobeRecherche .barreRecherche input{
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.09);
+    border: none;
+    border-radius: 5px;
+    color: grey;
+    height: 30px;
+    padding-left: 10px;
+    width: 25em;
+    outline: none;
+}
+.englobeRecherche .barreRecherche input:focus-visible{
+    border-bottom: 3px solid rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton (To research) à côté de l'input */
+.englobeRecherche .barreRecherche button{
+    width: 100px;
+    height: 30px;
+    color: black;
+    font-weight: bold;
+    background-color: rgb(255, 123, 0);
+    border-radius: 5px 0;
+    border: 0;
+    text-align: center;
+}
+.englobeRecherche .barreRecherche button:hover{
+    transform: scale(1.02);
+    color: rgb(255, 123, 0);
+    background-color: black;
+    font-style: italic;
+}
+
+.barreRecherche.apparaitre{
+    display: block;
+}
+
+                                                    /* Le titre de la navbar */
+.nav h1{
+    font-size: 35px;
+    color: white;
+    filter: drop-shadow(1px 1px 20px rgb(255, 255, 255));
+}
+
+                                                    /* Le sac de course dans la navbar */
+.sacDeCourse a{
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+.sacDeCourse a:hover{
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.sacDeCourse a img:hover{
+    transform: scale(1.2);
+}
+
+                                                    /* Le responsive de la navbar à -820 pixels */
+@media screen and (max-width: 820px) {
+    .nav{
+        padding: 25px 20px;
+    }
+
+    .englobeRecherche .barreRecherche input{
+        width: 10em;
+        height: 25px;
+    }
+
+    .englobeRecherche .barreRecherche button{
+        width: 40px;
+        height: 25px;
+        font-size: 7px;
+    }
+}
+
+                                                    /* Le responsive de la navbar à -500 pixels */
+@media screen and (max-width: 500px) {
+    .containheader header{
+        height: 95vh;
+    }
+
+    .nav{
+        padding: 25px 20px;
+    }
+
+    .nav .englobeRecherche .loupe img{
+        width: 25px;
+        height: 25px;
+    }
+
+    .nav .sacDeCourse a img{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+                                                    /* Le responsive de la navbar à -350 pixels */
+@media screen and (max-width: 350px) {
+    .nav{
+        padding: 25px 20px;
+    }
+
+    .nav .englobeRecherche .loupe img{
+        width: 20px;
+        height: 20px;
+    }
+
+    .nav h1{
+        font-size: 25px;
+    }
+
+    .nav .sacDeCourse a img{
+        width: 25px;
+        height: 25px;
+    }
+}
+
+
+
+                                                    /* Le conteneur de la page de garde juste après la navbar mais sur le header */
+.PageOfGarde{
+    width: 100%;
+    position: absolute;
+    top: 40vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+                                                    /* Le slogan principal de notre pade man */
+.PageOfGarde .grandTitre h1{
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    filter: drop-shadow(1px 1px 20px rgb(174, 174, 174));
+}
+
+                                                    /* Le sous-slogan de notre page man */
+.PageOfGarde .grandTitre p{
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    margin-top: 45px;
+    margin-bottom: 45px;
+    filter: drop-shadow(1px 1px 20px rgb(194, 52, 52));
+}
+
+                                                    /* Conteneur de l'input et des boutons */
+.PageOfGarde .bouton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+}
+
+                                                    /* Le bouton voir plus */
+.PageOfGarde .bouton button{
+    width: 200px;
+    height: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border-radius: 25px;
+    border: 0;
+    text-align: center;
+}
+.PageOfGarde .bouton button:hover{
+    transform: scale(1.1);
+    color: rgb(255, 123, 0);
+    background-color: white;
+    font-style: italic;
+    cursor: inherit;
+}
+
+                                                    /* Le responsive de la page de garde juste après la navbar à -600 pixels */
+@media screen and (max-width: 600px) {
+    .PageOfGarde{
+        top: 25vh;
+    }
+
+    .PageOfGarde .bouton button{
+        width: 150px;
+        font-size: 20px;
+    }
+}
+
+                                                    /* Le responsive de la page de garde juste après la navbar à -370 pixels */
+@media screen and (max-width: 370px) {
+    .PageOfGarde .bouton button{
+        width: 100px;
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+                                                    /* La section jeunes et adults du de la page man */
+.sectionJeunesAdults{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 40px 0;
+    gap: 5px;
+}
+
+                                                    /* La div de la partie jeunes */
+.sectionJeunesAdults .jeunes{
+    width: 50%;
+    background-color: white;
+}
+
+                                                    /* La div de la catégorie jeunes */
+.sectionJeunesAdults .jeunes .categorieJeunes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+                                                    /* Le h3 jeunes */
+.sectionJeunesAdults .jeunes .categorieJeunes h3{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 50px;
+}
+.sectionJeunesAdults .jeunes .categorieJeunes h3:hover{
+    color: white;
+    background-color: black;
+    transition: 1s;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+                                                    /* La première div des images de chaussures pour jeunes */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1{
+    width: 99%;
+    height: 50vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-radius: 25px;
+}
+
+                                                    /* La div de la première gallerie */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+                                                    /* Les images dans la gallerie */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item:nth-child(1){
+    background-image: url("img/AirJordan6Retro.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le premier article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* l'info nom de l'article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information1 .nomArticle1 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information1 .prixEtbouton1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information1 .prixEtbouton1 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information1 .prixEtbouton1 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information1 .prixEtbouton1 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+
+
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item:nth-child(2){
+    background-image: url("img/AirForce1a.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le deuxième article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* l'info nom de l'article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information2 .nomArticle2 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information2 .prixEtbouton2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information2 .prixEtbouton2 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information2 .prixEtbouton2 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information2 .prixEtbouton2 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item:nth-child(3){
+    background-image: url("img/AirJordanRetro4.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le troisième article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information3{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information3 .nomArticle3 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information3 .prixEtbouton3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information3 .prixEtbouton3 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information3 .prixEtbouton3 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information3 .prixEtbouton3 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item:nth-child(4){
+    background-image: url("img/NikeKYRIE4.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le quatrième article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information4{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information4 .nomArticle4 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information4 .prixEtbouton4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information4 .prixEtbouton4 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information4 .prixEtbouton4 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information4 .prixEtbouton4 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item{
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: flex 0.8s ease;
+    filter: blur(1.2px) brightness(.7);
+}
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item:hover{
+    flex: 5;
+    filter: blur(0);
+}
+
+
+
+                                                    /* La deuxième div des images de chaussures pour jeunes */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2{
+    width: 99%;
+    height: 50vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-radius: 25px;
+}
+
+                                                    /* La div de la deuxième gallerie */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+                                                    /* Les images dans la gallerie */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item:nth-child(1){
+    background-image: url("img/AirJordan1.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le premier article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information1 .nomArticle1 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information1 .prixEtbouton1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information1 .prixEtbouton1 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information1 .prixEtbouton1 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information1 .prixEtbouton1 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item:nth-child(2){
+    background-image: url("img/YEEZYBOOST350.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le deuxième article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article  */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information2 .nomArticle2 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information2 .prixEtbouton2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information2 .prixEtbouton2 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information2 .prixEtbouton2 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information2 .prixEtbouton2 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item:nth-child(3){
+    background-image: url("img/LouisVuitton.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le troisième article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information3{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information3 .nomArticle3 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information3 .prixEtbouton3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information3 .prixEtbouton3 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information3 .prixEtbouton3 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information3 .prixEtbouton3 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item:nth-child(4){
+    background-image: url("img/Vans.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le quatrième article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information4{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information4 .nomArticle4 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information4 .prixEtbouton4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information4 .prixEtbouton4 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /*  Le bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information4 .prixEtbouton4 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information4 .prixEtbouton4 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item{
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: flex 0.8s ease;
+    filter: blur(1.2px) brightness(.7);
+}
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item:hover{
+    flex: 5;
+    filter: blur(0);
+}
+
+
+
+                                                    /* La troisième div des images de chaussures pour jeunes */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3{
+    width: 99%;
+    height: 50vh;
+    margin: 0 0 3px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-radius: 25px;
+}
+
+                                                    /* La div de la deuxième gallerie */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+                                                    /* Les images dans la gallerie */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item:nth-child(1){
+    background-image: url("img/AirMax720.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le premier article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information1 .nomArticle1 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information1 .prixEtbouton1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information1 .prixEtbouton1 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information1 .prixEtbouton1 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information1 .prixEtbouton1 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item:nth-child(2){
+    background-image: url("img/UnderArmourBlack.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le deuxième article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information2 .nomArticle2 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information2 .prixEtbouton2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information2 .prixEtbouton2 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information2 .prixEtbouton2 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information2 .prixEtbouton2 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item:nth-child(3){
+    background-image: url("img/AirJordan13.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le troisième article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information3{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information3 .nomArticle3 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information3 .prixEtbouton3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information3 .prixEtbouton3 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information3 .prixEtbouton3 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information3 .prixEtbouton3 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item:nth-child(4){
+    background-image: url("img/Prada.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le quatrième article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information4{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information4 .nomArticle4 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information4 .prixEtbouton4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information4 .prixEtbouton4 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information4 .prixEtbouton4 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information4 .prixEtbouton4 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.02px);
+}
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item{
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: flex 0.8s ease;
+    filter: blur(1.2px) brightness(.7);
+}
+.sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item:hover{
+    flex: 5;
+    filter: blur(0);
+}
+
+
+
+                                                    /* Le hr existant entre les deux catégories */
+.sectionJeunesAdults hr{
+    border: 2px solid black;
+}
+
+
+
+
+                                                    /* La div de la partie adults */
+.sectionJeunesAdults .adults{
+    width: 50%;
+    background-color: white;
+    padding: 0 5px;
+}
+
+                                                    /* La div de la catégorie adults */
+.sectionJeunesAdults .adults .categorieAdults{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+                                                    /* Le h3 adults */
+.sectionJeunesAdults .adults .categorieAdults h3{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    color: black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 50px;
+}
+.sectionJeunesAdults .adults .categorieAdults h3:hover{
+    color: white;
+    background-color: black;
+    transition: 1s;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+                                                    /* La première div des images de chaussures pour adults */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1{
+    width: 99%;
+    height: 50vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-radius: 25px;
+}
+
+                                                    /* La div de la première gallerie */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+                                                    /* Les images dans la gallerie */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item:nth-child(1){
+    background-image: url("img/Soulier1.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le premier article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information1 .nomArticle1 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information1 .prixEtbouton1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information1 .prixEtbouton1 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information1 .prixEtbouton1 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information1 .prixEtbouton1 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item:nth-child(2){
+    background-image: url("img/Soulier2.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le deuxième article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information2 .nomArticle2 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information2 .prixEtbouton2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information2 .prixEtbouton2 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information2 .prixEtbouton2 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information2 .prixEtbouton2 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item:nth-child(3){
+    background-image: url("img/Soulier3.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le troisième article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information3{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information3 .nomArticle3 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information3 .prixEtbouton3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information3 .prixEtbouton3 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information3 .prixEtbouton3 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information3 .prixEtbouton3 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item:nth-child(4){
+    background-image: url("img/Soulier4.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le quatrième article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information4{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information4 .nomArticle4 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information4 .prixEtbouton4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information4 .prixEtbouton4 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information4 .prixEtbouton4 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information4 .prixEtbouton4 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item{
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: flex 0.8s ease;
+    filter: blur(1.2px) brightness(.7);
+}
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item:hover{
+    flex: 5;
+    filter: blur(0);
+}
+
+
+
+                                                    /* La deuxième div des images de chaussures pour adults */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2{
+    width: 99%;
+    height: 50vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-radius: 25px;
+}
+
+                                                    /* La div de la deuxième gallerie */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+                                                    /* Les images dans la gallerie */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item:nth-child(1){
+    background-image: url("img/Soulier5.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le premier article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information1 .nomArticle1 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information1 .prixEtbouton1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information1 .prixEtbouton1 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information1 .prixEtbouton1 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information1 .prixEtbouton1 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item:nth-child(2){
+    background-image: url("img/Soulier6.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le deuxième article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information2 .nomArticle2 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information2 .prixEtbouton2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information2 .prixEtbouton2 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information2 .prixEtbouton2 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information2 .prixEtbouton2 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item:nth-child(3){
+    background-image: url("img/Soulier7.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le premier article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information3{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information3 .nomArticle3 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information3 .prixEtbouton3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information3 .prixEtbouton3 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information3 .prixEtbouton3 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information3 .prixEtbouton3 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item:nth-child(4){
+    background-image: url("img/Soulier8.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le quatrième article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information4{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information4 .nomArticle4 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information4 .prixEtbouton4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information4 .prixEtbouton4 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information4 .prixEtbouton4 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information4 .prixEtbouton4 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: red;
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item{
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: flex 0.8s ease;
+    filter: blur(1.2px) brightness(.7);
+}
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item:hover{
+    flex: 5;
+    filter: blur(0);
+}
+
+
+
+                                                    /* La troisième div des images de chaussures pour adults */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3{
+    width: 99%;
+    height: 50vh;
+    margin: 0 0 3px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    border-radius: 25px;
+}
+
+                                                    /* La div de la troisième gallerie */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+                                                    /* Les images dans la gallerie */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item:nth-child(1){
+    background-image: url("img/Soulier9.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le premier article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information1 .nomArticle1 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information1 .prixEtbouton1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information1 .prixEtbouton1 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information1 .prixEtbouton1 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information1 .prixEtbouton1 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item:nth-child(2){
+    background-image: url("img/Soulier10.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le deuxième article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information2 .nomArticle2 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information2 .prixEtbouton2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information2 .prixEtbouton2 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information2 .prixEtbouton2 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information2 .prixEtbouton2 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item:nth-child(3){
+    background-image: url("img/Soulier11.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le troisième article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information3{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information3 .nomArticle3 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information3 .prixEtbouton3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information3 .prixEtbouton3 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information3 .prixEtbouton3 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information3 .prixEtbouton3 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item:nth-child(4){
+    background-image: url("img/Soulier12.jpeg");
+    border-radius: 25px;
+}
+
+                                                    /* la div des informations sur le qutrième article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information4{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+                                                    /* La div l'info nom de l'article */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information4 .nomArticle4 h4{
+    width: 60px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+}
+
+                                                    /* La div du prix et du bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information4 .prixEtbouton4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+                                                    /* Le prix */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information4 .prixEtbouton4 h4{
+    width: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgb(255, 123, 0);
+}
+
+                                                    /* Le bouton */
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information4 .prixEtbouton4 a button{
+    width: 75px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 5px;
+}
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information4 .prixEtbouton4 a button:hover{
+    cursor: pointer;
+    font-style: italic;
+    color: rgb(255, 123, 0);
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item{
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: flex 0.8s ease;
+    filter: blur(1.2px) brightness(.7);
+}
+.sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item:hover{
+    flex: 5;
+    filter: blur(0);
+}
+
+
+                                                    /* Le responsive de La section jeunes et adults du de la page man à -969 pixels */
+@media screen and (max-width: 960px) {
+    .sectionJeunesAdults{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .sectionJeunesAdults .jeunes{
+        width: 100%;
+    }
+
+    .sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1{
+        height: 25vh;
+    }
+
+    .sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2{
+        height: 25vh;
+    }
+
+    .sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3{
+        height: 25vh;
+    }
+
+    .sectionJeunesAdults .adults{
+        width: 100%;
+    }
+
+    .sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1{
+        height: 25vh;
+    }
+
+    .sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2{
+        height: 25vh;
+    }
+
+    .sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3{
+        height: 25vh;
+    }
+}
+
+                                                    /* Le responsive de La section jeunes et adults du de la page man à -330 pixels */
+@media screen and (max-width: 360px) {
+    .sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information1 .prixEtbouton1 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+    .sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information2 .prixEtbouton2 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+    .sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information3 .prixEtbouton3 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+    .sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes1 .gallerie1 .item .information4 .prixEtbouton4 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+
+    .sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information1 .prixEtbouton1 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+    .sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information2 .prixEtbouton2 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+    .sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information3 .prixEtbouton3 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+    .sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes2 .gallerie2 .item .information4 .prixEtbouton4 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+
+    .sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information1 .prixEtbouton1 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+    .sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information2 .prixEtbouton2 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+    .sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information3 .prixEtbouton3 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+    .sectionJeunesAdults .jeunes .firstGallerieDeDefilementJeunes3 .gallerie3 .item .information4 .prixEtbouton4 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+
+
+
+
+    .sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information1 .prixEtbouton1 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+    .sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information2 .prixEtbouton2 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+    .sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information3 .prixEtbouton3 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+    .sectionJeunesAdults .adults .firstGallerieDeDefilementAdults1 .gallerie1 .item .information4 .prixEtbouton4 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+
+    .sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information1 .prixEtbouton1 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+    .sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information2 .prixEtbouton2 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+    .sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information3 .prixEtbouton3 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+    .sectionJeunesAdults .adults .firstGallerieDeDefilementAdults2 .gallerie2 .item .information4 .prixEtbouton4 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+
+    .sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information1 .prixEtbouton1 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+    .sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information2 .prixEtbouton2 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+    .sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information3 .prixEtbouton3 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+    .sectionJeunesAdults .adults .firstGallerieDeDefilementAdults3 .gallerie3 .item .information4 .prixEtbouton4 a button{
+        width: 50px;
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+
+                                                    /*  La div des propositions de chaussures */
+.propositions{
+    width: 100%;
+    padding: 15px 0;
+    height: max-content;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+                                                    /* L'écriture autre */
+.propositions .nom1 h3{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    width: 200px;
+    height: 35px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 25px;
+}
+.propositions .nom1 h3:hover{
+    color: black;
+    background-color: white;
+}
+
+                                                    /* La div de toutes les images se trouvant dans autre */
+.propositions .autre{
+    width: 98%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+                                                    /* conteneur des deux grids */
+.propositions .autre .grid{
+    display: flex;
+    width: 100%;
+}
+
+                                                    /* Le conteneur des image, grid 1 */
+.propositions .autre .grid .grid1{
+    display: flex;
+    width: 100%;
+}
+
+                                                    /* Le conteneur des image, grid 2 */
+.propositions .autre .grid .grid2{
+    display: flex;
+    width: 100%;
+}
+
+                                                    /* Les images dans la catégorie autre */
+.propositions .autre a img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 200;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    border: 1.5px solid white;
+    filter: blur(1.1px) brightness(.7);
+}
+.propositions .autre a img:hover{
+    filter: brightness(1);
+}
+
+
+
+
+                                                    /* L'écriture our Customs */
+.propositions .nom2 h3{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    width: 250px;
+    height: 35px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 25px;
+}
+.propositions .nom2 h3:hover{
+    color: black;
+    background-color: white;
+}
+
+                                                    /* La div de toutes les images se trouvant dans our Customs */
+.propositions .ourCustoms{
+    width: 98%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+                                                    /* conteneur des deux grids */
+.propositions .ourCustoms .grid{
+    display: flex;
+    width: 100%;
+}
+
+                                                    /* Le conteneur des image, grid 1 */
+.propositions .ourCustoms .grid .grid1{
+    display: flex;
+    width: 100%;
+}
+
+                                                    /* Le conteneur des image, grid 2 */
+.propositions .ourCustoms .grid .grid2{
+    display: flex;
+    width: 100%;
+}
+
+                                                    /* Les images dans la catégorie our Customs */
+.propositions .ourCustoms a img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 200;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    border: 1.5px solid white;
+    filter: blur(1.1px) brightness(.7);
+}
+.propositions .ourCustoms a img:hover{
+    filter: brightness(1);
+}
+
+
+                                                    /* Le responsive de la parie proposition à -500 pixels juste après la section jeunes et adults */
+@media screen and (max-width: 500px) {
+    .propositions .autre .grid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .propositions .ourCustoms .grid{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+                                                    /* Le responsive de la parie proposition à -290 pixels juste après la section jeunes et adults */
+@media screen and (max-width: 290px) {
+    .propositions .nom1 h3{
+        width: 150px;
+        height: 25px;
+        font-size: 10px;
+    }
+
+    .propositions .nom2 h3{
+        width: 150px;
+        height: 25px;
+        font-size: 10px;
+    }
+}
+
+
+
+
+
+
+
+                                                    /* L'espace du mot de fin juste après la div d'inscription */
+.espaceDeMarque{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    padding: 0 3px;
+}
