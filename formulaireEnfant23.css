@@ -1,0 +1,281 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: cursive;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-image: url(img/enfantF11.jpeg);
+}
+.containContact{
+    width: 100%;
+    padding-top: 23px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.containerContact{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.containerContact .imageContact{
+    width: 50%;
+    height: 373px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    filter: drop-shadow(1px 1px 20px rgb(0, 0, 0));
+}
+.containerContact .imageContact img{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 0 0 25px;
+}
+.containerContact .formulaire{
+    width: 50%;
+    height: 373px;
+}
+.containerContact .formulaire form fieldset{
+    height: 373px;
+    border-radius: 0 25px 25px 0;
+    padding: 20px 20px 10px 5px;
+    background-color: white;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    filter: drop-shadow(1px 1px 20px rgb(0, 0, 0));
+}
+.containerContact .formulaire form fieldset input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 20em;
+    height: 30px;
+    padding-left: 5px;
+    font-style: italic;
+    font-family: cursive;
+}
+.containerContact .formulaire form fieldset .tel{
+    display: flex;
+}
+.containerContact .formulaire form fieldset .tel select{
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: 2px solid gray;
+    background-color: white;
+}
+.containerContact .formulaire form fieldset .tel input{
+    width: 16em;
+}
+.containerContact .formulaire form fieldset .pointure{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+}
+.containerContact .formulaire form fieldset .textPointure{
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: italic;
+}
+.containerContact .formulaire form fieldset .pointure input{
+    width: 12px;
+}
+.containerContact .formulaire form fieldset .bouton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerContact .formulaire form fieldset .bouton button{
+    width: 155px;
+    height: 45px;
+    border-radius: 15px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: white;
+    color: green;
+    border: 2px solid green;
+    font-family: cursive;
+}
+.containerContact .formulaire form fieldset .bouton button:hover{
+    color: white;
+    background-color: green;
+    transform: scale(1.02);
+    font-style: italic;
+    filter: drop-shadow(1px 1px 20px rgb(37, 37, 37));
+}
+
+.bouton{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+a{
+    text-decoration: none;
+}
+
+a .back{
+    text-align: center;
+    margin: 0 10px 10px 0;
+    width: 100px;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: white;
+    color: gray;
+    border: 2px solid gray;
+    font-family: cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+a .back:hover{
+    color: white;
+    background-color: gray;
+    transform: scale(1.02);
+    font-style: italic;
+    filter: drop-shadow(1px 1px 20px rgb(37, 37, 37));
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1275px) {
+    .containerContact{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 1129px) {
+    body{
+        background-image: url(img/enfantF11.jpeg)no-repeat;
+        height: 100vh;
+    }
+}
+@media screen and (max-width: 1045px) {
+    .containerContact{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 875px) {
+    .containerContact{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 735px) {
+    .containerContact{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 650px) {
+    .containerContact{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 625px) {
+    .containerContact .imageContact{
+        height: 340px;
+    }
+
+    .containerContact .imageContact img{
+        height: 100%;
+    }
+
+    .containerContact .formulaire{
+        height: 340px;
+    }
+
+    .containerContact .formulaire form fieldset{
+        height: 340px;
+    }
+
+    .containerContact .formulaire form fieldset input{
+        width: 15em;
+    }
+
+    .containerContact .formulaire form fieldset .tel input{
+        width: 11em;
+    }
+}
+@media screen and (max-width: 500px) {
+    .containContact{
+        padding-top: 100px;
+        padding-bottom: 30px;
+    }
+
+    .containerContact .imageContact{
+        width: 30%;
+        height: 340px;
+    }
+
+    .containerContact .imageContact img{
+        height: 100%;
+    }
+
+    .containerContact .formulaire{
+        width: 70%;
+        height: 340px;
+    }
+
+    .containerContact .formulaire form fieldset{
+        height: 340px;
+    }
+
+    .containerContact .formulaire form fieldset input{
+        width: 15em;
+    }
+}
+@media screen and (max-width: 395px) {
+    .containerContact{
+        width: 85%;
+    }
+
+    .containerContact .imageContact{
+        width: 30%;
+        height: 325px;
+    }
+
+    .containerContact .imageContact img{
+        height: 100%;
+    }
+
+    .containerContact .formulaire{
+        width: 70%;
+        height: 325px;
+    }
+
+    .containerContact .formulaire form fieldset{
+        height: 325px;
+    }
+
+    .containerContact .formulaire form fieldset input{
+        padding: 0;
+        margin: 0;
+        font-family: cursive;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+}

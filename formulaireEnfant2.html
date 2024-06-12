@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garçon</title>
+    <link rel="stylesheet" href="formulaireEnfant2.css">
+    <link rel="web icon" type="png" href="img/enfantG2.jpeg">
+</head>
+<body>
+    <div class="contact">
+        <!-- Conteneur de la suite mais dans le contact -->
+        <div class="containContact">
+            <div class="containerContact">
+                <!-- la div de l'image de confiance dans contact -->
+                <div class="imageContact">
+                    <img src="img/enfantG2.jpeg" alt="image De Confiance">
+                </div>
+
+                <!-- La div du formulaire  -->
+                <div class="formulaire">
+                    <!-- La balise du formulaire -->
+                    <form action="#">
+                        <!-- Le fieldset du formulaire -->
+                        <fieldset>
+                            <!-- Les différents champs de remplissage du formulaire -->
+                            <div class="n">
+                                <input type="text" placeholder="Last Name" maxlength="25" required>
+                            </div>
+    
+                            <div class="pr">
+                                <input type="text" placeholder="First Name" maxlength="50" required>
+                            </div>
+    
+                            <div class="tel">
+                                <select name="numero" id="numero">
+                                    <option>+225</option>
+                                    <option>+33</option>
+                                </select>
+                                <input type="tel" placeholder="00X00X00X00X00" maxlength="10" required>
+                            </div>
+    
+                            <div class="em">
+                                <input type="email" placeholder="email" maxlength="40" required>
+                            </div>
+    
+                            <div class="cp">
+                                <input type="text" placeholder="Postal Code" maxlength="25" required>
+                            </div>
+
+                            <div>
+                                <label for="pointure" class="textPointure">Votre pointure de chaussure:</label>
+                                <div class="pointure">
+                                    <input type="radio" name="pointure" required>
+                                    <label for="pointure" class="pt">14</label>
+                                    <input type="radio" name="pointure" required>
+                                    <label for="pointure" class="pt">15</label>
+                                    <input type="radio" name="pointure" required>
+                                    <label for="pointure" class="pt">16</label>
+                                    <input type="radio" name="pointure" required>
+                                    <label for="pointure" class="pt">17</label>
+                                    <input type="radio" name="pointure" required>
+                                    <label for="pointure" class="pt">18</label>
+                                </div>
+                            </div>
+    
+                            <div class="bouton">
+                                <button type="submit" class="submit">Validate the order</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bouton"><a href="enfant.html"><button class="back"><img src="img/fleche-gauche.png" alt="img" width="15" height="15">Back</button></a></div>
+</body>
+</html>
